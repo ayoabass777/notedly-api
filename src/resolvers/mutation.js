@@ -114,7 +114,7 @@ module.exports ={
    signIn: async(parent,{username, email, password},{ models }) =>{
     if (email){
         //normalize email address
-        email.trim().toLowerCase();
+       email= email.trim().toLowerCase();
     }
     
     const user = await models.User.findOne({
